@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Redressed&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto+Slab:wght@200;300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.landing, .about, .blogs{
+    background-color: #88786B;
+}
+.contacts, .work{
+    background-color: black;
+    color: whitesmoke;
+}
+ section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+} 
+
+.landing header, .contacts header .about header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+a{
+    text-decoration: none; 
+}
+.navigator{ 
+    margin: 20px 0px -50px 7%;
+    line-height: 90px;
+}
+.navigator a{
+    font-family: 'Redressed', cursive; font-weight: bold;
+    font-size: 10em;
+    color: black;
+}
+.navigator a:hover{
+    color: #070725;
+    transition: 2s ease-in-out;
+}
+
+.navigator .navTwo{
+    margin-left: 10%;
+}
+.navigator .navThree{
+    margin-left: 20%;
+  
+}
+.navigator .lastNav{
+    display: flex;
+}
+.navigator .navFour a{
+    font-family: 'Redressed', cursive; font-weight: bold;
+    font-size: 4em;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 30px;
+    margin-top: 500px;
+}
+aside{
+    position: absolute;
+    top: 100px; 
+    right: 10px;
+}
+.socialmedia a{
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.socialmedia i{
+    color: white;
+}
+ 
+.vert-line{
+   margin-top: 35px;
+   margin-left: 15px;
+    height: 150px;
+    border-left: 3px solid black;
+}
+
+.intro{
+    margin-top: -3px; 
+    margin-left: 73%;
+}
+.intro h4{
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.6em;
+    font-weight: regular; 
+}
+.intro p{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: lighter;
+    font-size: 0.7em;
+}
+footer{
+    display: flex;
+    font-size: 0.5em;
+    margin-top: 0px;
+    margin-left: 5%;
+
+}
+.horiz-line{
+    width: 150px;
+    border-bottom: 3px solid black;
+    margin: auto;
+}
+
+/* ---------=============**********Contactpage************===========-------- --- */
+
+.contacts header{
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.contacts header a{
+    color: white;
+}
+.content{
+    width: 70%;
+    display: flex;
+    margin: auto;
+    padding: 100px 100px 50px 100px;
+
+}
+.contacts .vert-line{
+    position: absolute;
+    right: 20px;
+    border-left: 3px solid whitesmoke;
+}
+.left-cont{
+    width: 80%;
+    line-height: 50px;
+    text-align: center;
+}
+.contacts form{
+    width: 100%;
+    text-align: center;
+}
+.contacts form .form-control{
+    box-sizing: border-box;
+    width: 250px;
+    margin-bottom: 5px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px white solid;
+    color: white;
+}
+.contacts form .submit{
+    width: 250px;
+    height: 40px;
+}
+.right-cont{
+    width: 80%;
+    margin-left: 100px;
+    text-align: center;
+}
+.right-cont h3{
+    font-family: 'Redressed', cursive; 
+    font-size: 5em;
+    font-weight: bold;
+}
+.lines{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-cont .lineOne{
+    width: 40%;
+    border-bottom: 0.5px whitesmoke solid;
+    margin: 20px;
+}
+.right-cont .lineTwo{
+    width: 30%;
+    border-bottom: 1px whitesmoke solid;
+}
+.cont-social{
+    margin-top: 20px;
+}
+.cont-social h6{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+}
+.icon-social{
+   
+    margin-top: 10px;
+}
+.icon-social a{
+    padding: 7px;
+    margin: 20px 3px 0px 0px;
+    background-color: whitesmoke;
+    text-decoration: none;
+    border-radius: 50%;
+    text-align: center;
+}
+.icon-social i{
+    color: black;
+}
+
+/* --- About page ---- */
+.about header{
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.about header span a{
+    color: white;
+}
+.about-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 10%;
+}
+
+.about-profile{
+   width: 20%;
+}
+.about-profile img{
+    width: 300px;
+    height: 450px;
+}
+.about-info{
+    width: 60%;
+   
+}
+.about-info h2{
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3em;
+    font-weight: bold;
+}
+.about-info .summary{
+    margin: 30px 0px 0px 100px ;
+    text-align: justify;
+}
+.about-info .summary h5{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.6em;
+    font-weight:  700px;
+    margin-bottom: 50px;
+}
+.about-info .summary i{
+    margin-left: 150px;
+}
+.about-info .summary a{
+    text-decoration: underline;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: black;
+
+}
+.about-info p{
+    padding: 5px 0px;
+}
+
+/*--------==========***** Blog ***********===========----------*/
+.blogs{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-columns: 5px 10% 10% auto 10% 10% 5px;
+    grid-template-rows: 80px 70px 50px;
+    grid-template-areas: 
+    ". logo . . . login ." 
+    ". . bl-list-title bl-list-title bl-list-title . ."
+    ". . . . . blg-side ." 
+    ". . . blg-cont-One . blg-side ." 
+    ". . . blg-cont-Two . blg-side ." 
+    ". . . blg-cont-Three . blg-side ." 
+    ". . . blg-cont-Four . blg-side .";
+}
+.blogs .logo{
+    grid-area: logo;
+    align-self: center;
+    justify-self: center;
+}
+.blogs .login{
+    grid-area: login;
+    align-self: center;
+    justify-self: center;
+}
+.bl-list-title{
+    grid-area: bl-list-title;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+.blg-side{
+    grid-area: blg-side;
+    justify-self: self-end;
+}
+.blg-side a{
+    display: block;
+    background-color: black;
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 50%;
+}
+.blg-side i{
+    color: white;
+    font-size: small;
+}
+.blg-side .side-line{
+    height: 200px;
+    border-right: 3px black solid;
+    margin-right: 20px;
+}
+ .bl-prt{
+    padding: 20px 20px 0px 20px; 
+    display: grid;
+    grid-template-columns: 20% 60% 15% auto;
+    grid-template-rows: repeat(auto 3);
+    grid-template-areas: "blg-date blg-cont blg-img ."
+    "blg-title blg-cont blg-img blg-readM"
+    ". underline . .";
+} 
+.blg-underline{
+    grid-area: underline;
+    border-bottom: 3px rgb(82, 79, 79) solid;
+    width: 60%;
+    margin: auto;
+    border-radius: 30%;
+}
+.blg-cont-One{
+    grid-area: blg-cont-One;
+}
+.blg-cont-Two{
+    grid-area: blg-cont-Two;
+}
+.blg-cont-Three{
+    grid-area: blg-cont-Three;
+}
+.blg-cont-Four{
+    grid-area: blg-cont-Four;
+}
+.blg-date{
+    grid-area: blg-date;
+    align-self: end;
+}
+.blg-title{
+    grid-area: blg-title;
+}
+.blg-cont{
+    grid-area: blg-cont;
+}
+.blg-cont p{
+    text-align: justify;  
+    padding-right: 40px;  
+}
+.blg-img{
+    grid-area: blg-img;
+    align-self: center;
+    justify-self: end;
+}
+.blg-readM{
+    grid-area: blg-readM;
+    align-self: end;
+    border: 1px black solid;
+    padding: 3px 5px;
+    border-radius: 10px;
+}
+.blg-readM a{
+    font-size: smaller;
+    color: wheat;
+}
+.blg-readM:hover{
+    background-color: #0D101B;
+    color: white;
+    transition: 1s ease-in-out;
+}
+
+/*==============--------**** Blog view ****--------=======*/
+
+.blog-view{
+    background-color: #88786B;
+    display: grid;
+    grid-template-columns: 5% 10% 50% auto 10% 5%;
+    grid-template-rows: 10% 10% 1fr 1fr 1fr;
+    grid-template-areas: ". logoB . . loginB ."
+    ". . blgV-title blgV-title blgV-side ."
+    ". . blg-article blg-view-side blgV-side ."
+    ". . blg-article blg-view-side blg-Vside ."
+    ". . blg-article . . .";
+
+}
+
+.blog-view .logo{
+    grid-area: logoB;
+    align-self: center;
+}
+.blog-view .login{
+    grid-area: loginB;
+    justify-self: end;
+    align-self: center;
+}
+.blgV-side{
+    grid-area: blgV-side;
+    justify-self: end;
+}
+.blgV-side a{
+    display: block;
+    background-color: black;
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 50%
+}
+.blgV-side i{
+    color: white;
+    font-size: small;
+}
+.blgV-side .side-line{
+    height: 200px;
+    border-right: 3px black solid;
+    margin-right: 20px;
+}
+.blgV-title{
+    grid-area: blgV-title;
+    display: flex;
+    justify-content: space-between;    
+}
+.blgV-title h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+    text-decoration: underline;
+}
+.blg-article{
+    grid-area: blg-article;
+    padding: 0px 50px;
+    text-align: justify;
+}
+.blg-article img{
+    margin: 20px 0px 20px 15%;
+    
+}
+.blg-article strong{
+    font-size: 2em;
+    font-style: lighter;
+}
+.blg-view-side{
+    grid-area: blg-view-side;  
+    align-self: center;
+}
+.blgVside{
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto 3);
+    grid-template-rows: repeat(auto 3);  
+    grid-template-areas: "blgVside-date blgVside-cont blgVside-arrow"
+    "blgVside-date blgVside-cont blgVside-arrow"
+    "blgVside-date blgVside-cont blgVside-arrow";
+    grid-gap: 20px;
+}
+.blgVside .blgVside-date{
+    grid-area: blgVside-date;
+    align-self: end;
+    font-size: small;
+    font-weight: 1000;
+}
+.blgVside .blgVside-cont{
+    grid-area: blgVside-cont;
+
+}
+.blgVside .blgVside-arrow{
+    grid-area: blgVside-arrow;
+    align-self: center;
+
+}
+
+
+/* ==============-----------****** Work *******-----------======= */
+
+.work{
+    display: grid;
+    grid-template-columns: 50px 60px 100px auto 25% 30px 60px 50px;
+    grid-template-rows: 100px 150px auto auto 100px;
+    grid-template-areas: ". worLogo worLogo . . . worLogin ."
+    ". . work-title work-title . . work-side ."
+    ". . . cards-work explain-work . work-side ."
+    ". . . cards-work explain-work . work-side ."
+    ". . . . . . . .";
+}
+.work .logo{
+    grid-area: worLogo;
+    align-self: center;
+}
+.work .login{
+    grid-area: worLogin;
+    align-self: center;
+}
+.work .work-title{
+    grid-area: work-title;
+    align-self: center;
+    font-size: 2em;
+    text-decoration: underline;
+}
+.work .work-side{
+    grid-area: work-side;
+    justify-self: center;
+}
+.work-side a{
+    display: block;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 50%
+}
+.work-side i{
+    color: black;
+    font-size: small;
+}
+.work-side .side-line{
+    height: 170px;
+    border-right: 3px white solid;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+ .work .cards-work{
+    grid-area: cards-work;
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+}
+.cards-work .frame{
+    height: 170px;
+} 
+
+.cards-work{
+    grid-area: cards-work;
+    /* padding: 30px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "One Two" "Three Four";
+    grid-gap: 10px;
+    
+    
+}
+.cards-work .frame{
+    /* grid-area: One; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "first second" "third fourth";  
+}
+.cards-work .Two{
+    /* grid-area: Two; */
+
+}
+.cards-work .Three{
+    /* grid-area: Three; */
+    
+}
+.cards-work .Four{
+    /* grid-area: Four; */
+    
+}
+.sqr-corner{
+    width: 20px;
+    height: 20px;
+    border: 3px rgb(64, 64, 66) solid;
+    
+}
+.first{
+    grid-area: first;
+    border-width: 3px 0px 0px 3px;
+}
+.second{
+    grid-area: second;
+    border-width: 3px 3px 0px 0px;
+    
+}
+.third{
+    grid-area: third;
+    border-width: 0px 0px 3px 3px;
+}
+.fourth{
+    grid-area: fourth;
+    border-width: 0px 3px 3px 0px;
+}
+
+.frame img{
+    position: absolute;
+    /* margin: auto; */
+    margin-left: 30px;
+    margin-top: 20px; 
+   }
+.frame h4{
+    margin: auto;
+}
+.work .explain-work{
+    grid-area: explain-work;
+    padding: 10px;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    border: 1px #88786B solid;
+    align-self: end;
+    justify-self: end;
+    font-size: smaller;
+    
+}
+
+/* -------==============******* Dashboard *********======------*/
+.dashboard{
+    background-color: #0D101B;
+    display: grid;
+    grid-template-columns: 15% auto;
+}
+
+.sidebar{
+    background-color: #161B30;
+    color: white;
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: 150px 70px 70px 70px 70px 70px 70px 70px;
+    grid-template-areas: ". sidb-title ." ". dashb ." ". posts ." ". media ." ". comments ." 
+    ". subscrib ." ". settings .";
+}
+.sidebar .sidb-title{
+    grid-area: sidb-title;
+    align-self: center;
+}
+.sidebar .dashb{
+    grid-area: dashb;
+    align-self: center;
+}
+.sidebar .posts{
+    grid-area: posts;
+    align-self: center;
+}
+.sidebar .media{
+    grid-area: media;
+    align-self: center;
+}
+.sidebar .comments{
+    grid-area: comments;
+    align-self: center;
+}
+.sidebar .subscription{
+    grid-area: subscrib;
+    align-self: center;
+}
+.sidebar .settings{
+    grid-area: settings;
+    align-self: center;
+}
