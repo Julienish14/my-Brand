@@ -34,12 +34,12 @@ a{
     text-decoration: none; 
 }
 .navigator{ 
-    margin: 20px 0px -50px 7%;
+    margin: 20px 0px -5% 7%;
     line-height: 90px;
 }
 .navigator a{
     font-family: 'Redressed', cursive; font-weight: bold;
-    font-size: 10em;
+    font-size: 10rem;
     color: black;
 }
 .navigator a:hover{
@@ -630,14 +630,15 @@ footer{
     background-color: #161B30;
     color: white;
     display: grid;
-    grid-template-columns: 20% auto 20%;
-    grid-template-rows: 150px 70px 70px 70px 70px 70px 70px 70px;
+    grid-template-columns: 15% auto 15%;
+    grid-template-rows: 140px 70px 70px 70px 70px 70px 70px 70px 5px 20px;
     grid-template-areas: ". sidb-title ." ". dashb ." ". posts ." ". media ." ". comments ." 
-    ". subscrib ." ". settings .";
+    ". subscrib ." ". settings ." ". . ." ". logout logout";
 }
 .sidebar .sidb-title{
     grid-area: sidb-title;
     align-self: center;
+    justify-self: center;
 }
 .sidebar .dashb{
     grid-area: dashb;
@@ -662,4 +663,203 @@ footer{
 .sidebar .settings{
     grid-area: settings;
     align-self: center;
+}
+.sidebar .logout{
+    grid-area: logout;
+    align-self: end;
+    justify-self: end;
+    margin-right: 20px;
+    width: 90px;
+}
+.sidebar .dbtn{
+    border: 1px white solid;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.mainbar{
+   display: grid;
+   grid-template-columns: 5% auto 5%;
+   grid-template-rows: 5% 3% auto 3% 45% 2%;
+   grid-template-areas: "dash-head dash-head dash-head"
+   ". middle-part ." ". . ." ". down-part ." ". . .";
+
+}
+.mainbar .dash-head{
+    background-color: #10162C;
+    grid-area: dash-head;
+    display: grid;
+    grid-template-columns: 5% auto 5%;
+    grid-template-areas: ". search-dash admin-profile";
+}
+.mainbar .search-dash{
+    grid-area: search-dash;
+    justify-self: end;
+    align-self: center;
+    margin-right: 20px;
+}
+.mainbar .search-dash input{
+    width: 200px;
+    border-radius: 30px;
+    padding: 3px 10px;
+}
+.mainbar .admin-profile{
+    grid-area: admin-profile;
+    align-self: center;
+}
+.mainbar .admin-profile img{
+    border-radius: 50%;
+}
+.mainbar .middle-part{
+    grid-area: middle-part;
+    border: 1px white solid;
+    display: grid;
+    grid-template-columns: 5% 20%  20% auto 5%;
+    grid-template-rows: 15%  auto auto;
+    grid-template-areas: ". select-dash . . ."
+    ". c-visitor c-post ."
+    ". c-comments c-sub .";
+}
+.middle-part .select-dash-period{
+    grid-area: select-dash;
+    align-self: center;
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    padding: 0px 5px;
+}
+.middle-part .dash-cards div{
+    border: 1px white solid;
+}
+.dash-cards .c-visitor{
+    grid-area: c-visitor;
+}
+.dash-cards .c-post{
+    grid-area: c-post;
+}
+.dash-cards .c-comments{
+    grid-area: c-comments;
+}
+.dash-cards .c-subscribe{
+    grid-area: c-sub;
+}
+.middle-part .dash-chart{
+    grid-area: dash-chart;
+    justify-self: center;
+}
+.mainbar .down-part{
+    display: grid;
+    grid-template-columns: 65% 3% auto;
+    grid-template-areas: "tab . message";
+    grid-area: down-part;
+    background-color: #10162C;
+    border: 1px black solid;
+    color: wheat;
+}
+.down-part .tab{
+    grid-area: tab;
+    border: 2px white solid;
+    border-radius: 10%;   
+    border-collapse: collapse;
+    margin: 20px;
+    
+}
+.down-part .tab th{
+    text-align: center;
+}
+.down-part .tab td{
+    text-align: center;
+}
+.down-part .message{
+    grid-area: message;
+    border: 2px black solid;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #05051f;
+}
+.down-part .message h4{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+    color: whitesmoke;
+}
+.down-part .message .mess{
+    display: flex;
+    margin: auto;
+}
+.down-part .info-message{
+    font-size: x-small;
+}
+.down-part .mess img{
+    border-radius: 50%;
+    margin: auto 5px;
+}
+.down-part .mess-line{
+    width: 100px;
+    border-bottom: 1px whitesmoke solid;
+    margin: 5px auto;
+    border-radius: 50%;
+}
+
+@media (max-width: 900px){
+    .navigator{
+        margin: auto;  
+        text-align: center;      
+    }
+    .navigator a{
+        font-size: 9rem;
+    }
+    .navigator .navTwo{
+        margin-left: 0;
+    }
+    .navigator .navThree{
+        margin-left: 0;
+      
+    }
+    .navigator .lastNav{
+        display: block;
+    }
+        
+    .intro{
+        margin: -70px auto;
+        padding: 50px;
+    }
+    .intro h4{
+        font-size: 2em;
+    }
+    .intro p{
+        font-size: 1em;
+    }
+
+    .landing aside{
+        position: relative;
+        top: 280px;
+        margin: auto;
+    }
+    .landing aside .socialmedia a{
+        margin: auto 5px;
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        
+    }
+    .landing aside .socialmedia i{
+        font-size: 2em;
+        margin-top: 15px;
+    }
+    footer{
+        margin: 200px auto 50px;
+    }
+    .landing .horiz-line{
+        display: none;
+    }
+    .landing .vert-line{
+        display: none;
+    }
+
 }
