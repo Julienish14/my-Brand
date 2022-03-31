@@ -826,7 +826,7 @@ footer{
     }
         
     .intro{
-        margin: -70px auto;
+        margin: -70px auto -20px auto;
         padding: 50px;
     }
     .intro h4{
@@ -840,7 +840,7 @@ footer{
 
     .landing aside{
         position: relative;
-        top: 280px;
+        top: 220px;
         margin: auto;
     }
     .landing aside .socialmedia a{
@@ -855,7 +855,7 @@ footer{
         margin-top: 15px;
     }
     footer{
-        margin: 200px auto 50px;
+        margin: 120px auto 50px;
     }
     .landing .horiz-line{
         display: none;
