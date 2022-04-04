@@ -897,25 +897,26 @@ footer{
     color: white;
 }
 .user-login .login-title{
-    width: 21%;
-    margin: auto;
-    margin: 200px auto 50px auto;
+    width: 100%;
+    margin-top: 150px;
     font-family: 'courier New';
     font-size: 1.2em;
+    text-align: center;
 
 }
 .user-login .login-cont{
     width: 70%;
     height: 40vh;
-    margin: auto;
+    margin: 10px auto 180px auto;
     display: flex;
     justify-content: space-between;
-    padding: 50px 150px;
+    padding: 100px 10% 50px 10%;
 }
 .login-left form input{
     margin-bottom: 10px;
     width: 100%;
     background-color: transparent;
+    color: white;
 
 }
 .login-left form .form-control{
@@ -925,14 +926,14 @@ footer{
 }
 .login-left form .submit{
     margin-top: 10px;
-    padding: 10px 10px;
+    padding: 3px 10px;
     border-radius: 15px;
     color: white;
 }
 .login-right div{
     width: 100%;
     border: 1px white dotted;
-    margin: 10px;
+    margin-bottom: 10px;
     padding: 5px 0px 5px 30px;
     border-radius: 20px;
     cursor: pointer;
@@ -1126,6 +1127,17 @@ footer{
     .blg-article-cont, .blg-view-side{
         padding-right: 20px;
     }
+
+    /* ------------------============= User login with.. ===========---------- */
+    .user-login .login-cont{
+        width: 100%;
+        padding: 100px 15% 50px 15%;
+    }
+    .user-login .user-login-footer{
+        width: 100%;
+        padding: 0px 30px;
+    }
+
  
      
 }
@@ -1351,7 +1363,36 @@ footer{
     .blg-view-side{
         margin-top: 150px;
     }
-
+    /* --------------============= User login with Acc ===========--------- */
+    
+    .user-login .login-title{
+        margin-top: 100px;
+    }
+    .user-login .login-cont{
+        display: block;
+    }
+    .user-login .login-right div{
+        text-align: center;
+    }
+    .user-login .login-left{
+        margin-bottom: 50px;
+    }
+    .user-login .login-left form input{
+        font-size: large;
+    }
+    .user-login-footer{
+        width: 100%;
+        padding: 0px;
+        margin-top: 250px;
+    }
+    .user-login-footer .user-signUP{
+        margin-top: -60px;
+        margin-left: -50px;
+        font-size: x-small;
+    }
+    .user-login-footer .user-signUP strong{
+        font-size: 0.5em;
+    }
 
 }
 
