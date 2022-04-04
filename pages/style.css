@@ -893,7 +893,67 @@ footer{
     margin: 5px auto;
     border-radius: 50%;
 }
+/* ==================------------------ login with your Acc ---------------=========== */
 
+.user-login{
+    background-color: black;
+    color: white;
+}
+.user-login .login-title{
+    width: 21%;
+    margin: auto;
+    margin: 200px auto 50px auto;
+    font-family: 'courier New';
+    font-size: 1.2em;
+
+}
+.user-login .login-cont{
+    width: 70%;
+    height: 40vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 150px;
+}
+.login-left form input{
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: transparent;
+
+}
+.login-left form .form-control{
+    padding: 5px 0px;
+    border: none;
+    border-bottom: 0.5px white solid;
+}
+.login-left form .submit{
+    margin-top: 10px;
+    padding: 10px 10px;
+    border-radius: 15px;
+    color: white;
+}
+.login-right div{
+    width: 100%;
+    border: 1px white dotted;
+    margin: 10px;
+    padding: 5px 0px 5px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.user-login-footer{
+    margin: 70px auto 20px auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.user-login-footer .user-signUP{
+    margin-top: -40px;
+}
+.user-login-footer .user-signUP strong{
+    font-size: 1.3em;
+    text-decoration: underline;
+    cursor: pointer;
+}
 @media(max-width: 1200px){
     /* =====================-----------Works -----------==================== */
     .expl-works{
