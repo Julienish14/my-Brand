@@ -427,12 +427,11 @@ footer{
     background-color: #88786B;
     display: grid;
     grid-template-columns: 5% 10% 50% auto 10% 5%;
-    grid-template-rows: 7% 7% auto auto 5% 20%;
+    grid-template-rows: 7% 7% auto auto 20%;
     grid-template-areas: ". logoB . . loginB ."
     ". . blgV-title blgV-title blgV-side ."
     ". . blg-article blg-view-side blgV-side ."
     ". . blg-article blg-article-cont blg-Vside ."
-    ". . blg-like . . ."
     ". . blg-comment . . .";
 }
 
@@ -534,15 +533,6 @@ footer{
     grid-area: blgVside-arrow;
     align-self: center;
 }
-.blg-like{
-    grid-area: blg-like;
-    justify-self: end;
-    padding-right: 110px;
-    font-size: 1em;
-}
-.blg-like i{
-    font-size: 2.5em;
-}
 .blg-comment{
     grid-area: blg-comment;
     padding: 20px 50px;
@@ -573,6 +563,11 @@ footer{
     background-color: black;
     color: white;
     cursor: pointer;
+}
+.like-blog{
+    margin-top: 50px;
+    height: 50px;
+    float: right;
 }
 .like-blog i{
     font-size: 3em;
@@ -760,9 +755,13 @@ footer{
 .mainbar{
    display: grid;
    grid-template-columns: 5% auto 5%;
-   grid-template-rows: 5% 3% auto 3% 45% 2%;
+   grid-template-rows: 10% 3% auto 3% 45% 2%;
    grid-template-areas: "dash-head dash-head dash-head"
-   ". middle-part ." ". . ." ". down-part ." ". . .";
+   ". . ." 
+   ". middle-part ."
+   ". . ."
+   ". down-part ." 
+   ". . .";
 
 }
 .mainbar .dash-head{
@@ -793,41 +792,51 @@ footer{
 .mainbar .middle-part{
     grid-area: middle-part;
     border: 1px white solid;
+    padding: 10px 20px;
     display: grid;
-    grid-template-columns: 5% 20%  20% auto 5%;
-    grid-template-rows: 15%  auto auto;
-    grid-template-areas: ". select-dash . . ."
-    ". c-visitor c-post ."
-    ". c-comments c-sub .";
+    grid-template-columns: repeat(auto 4);
+    grid-template-rows: 13% auto auto 2%;
+    grid-template-areas: "select-dash . . ."
+    "dash-cards dash-cards . dash-chart"
+    "dash-cards dash-cards . dash-chart"
+    ". . . .";
+}
+.dash-cards{
+    grid-area: dash-cards;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+.dash-cards div{
+    padding: 10px;
+    width: 200px;
+    height: 90px;
+    background-color: white;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.dash-cards div i{
+    font-size: 2.5em;
+}
+.dash-cards div h3{
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: bolder;
 }
 .middle-part .select-dash-period{
     grid-area: select-dash;
-    align-self: center;
     width: 100px;
     height: 25px;
     border-radius: 10px;
     background-color: black;
     color: white;
     padding: 0px 5px;
-}
-.middle-part .dash-cards div{
-    border: 1px white solid;
-}
-.dash-cards .c-visitor{
-    grid-area: c-visitor;
-}
-.dash-cards .c-post{
-    grid-area: c-post;
-}
-.dash-cards .c-comments{
-    grid-area: c-comments;
-}
-.dash-cards .c-subscribe{
-    grid-area: c-sub;
+    justify-self: end;
 }
 .middle-part .dash-chart{
     grid-area: dash-chart;
-    justify-self: center;
 }
 .mainbar .down-part{
     display: grid;
@@ -908,19 +917,15 @@ footer{
     .blg-side{
         justify-self: center;
     }
-    .blg-like{
-        align-self: end;
-    }
 
      /* -------------========== Blog Views ==============------------- */
      .blog-view{
         grid-template-columns: 3% 5% 50% auto 5% 3%;
-        grid-template-rows: 7% 7% auto auto 5% 20%;
+        grid-template-rows: 7% 7% auto auto 20%;
         grid-template-areas: ". logoB . . loginB ."
         ". blgV-title blgV-title blgV-title blgV-side ."
         ". blg-article blg-article blg-view-side blgV-side ."
         ". blg-article blg-article blg-article-cont blg-Vside ."
-        ". . blg-like . . ."
         ". . blg-comment . . .";
     }
 
@@ -1043,12 +1048,11 @@ footer{
     /* ---------------========= Blog View ============------------ */
     .blog-view{
         grid-template-columns: 3% 10% 50% auto 10% 3%;
-        grid-template-rows: 5% 5% auto auto 5% 20%;
+        grid-template-rows: 5% 5% auto auto 20%;
         grid-template-areas: ". logoB . . loginB ."
         ". blgV-title blgV-title blgV-title blgV-title ."
         ". blg-article blg-article blg-view-side blg-view-side ."
         ". blg-article blg-article blg-article-cont blg-article-cont ."
-        ". . blg-like blg-like . ."
         ". . blg-comment blg-comment . .";
     }
     .blgV-side{
@@ -1142,7 +1146,7 @@ footer{
 
     /* ------------============== BlogView =============-------------- */
     .blog-view{
-        grid-template-rows: 5% 5% auto auto auto auto 5% 20%;
+        grid-template-rows: 7% 7% auto auto auto auto 20%;
         grid-template-areas:
         ". logoB . . loginB ."
         ". . blgV-title blgV-title blgV-title ."
@@ -1150,23 +1154,10 @@ footer{
         ". . blg-article blg-article blg-article ."
         ". . blg-view-side blg-view-side blg-view-side ."
         ". . blg-article-cont blg-article-cont blg-article-cont ."
-        ". . blg-like blg-like blg-like ."
         ". . blg-comment blg-comment blg-comment .";
     }
     .blgV-side{
         display: none;
-    }
-    .blg-view-side{
-        margin-top: 70px;
-    }
-    .blg-article-cont{
-        margin-top: 50px;
-    }
-    .blg-like{
-        align-self: center;
-    }
-    .blg-comment{
-        align-self: start;
     }
 }
 @media(max-width: 600px){
