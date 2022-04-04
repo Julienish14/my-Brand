@@ -4,10 +4,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
-.landing, .about, .blogs{
+.landing, .about, .blogs, .blog-view{
     background-color: #88786B;
+    font-family: "Poppins", sans-serif;
 }
 .contacts, .work{
     background-color: black;
@@ -56,14 +56,14 @@ a{
 }
 .navigator .lastNav{
     display: flex;
+    align-items: center;
 }
 .navigator .navFour a{
     font-family: 'Redressed', cursive; font-weight: bold;
-    font-size: 4em;
+    font-size: 3.8em;
     font-weight: bold;
     text-decoration: underline;
-    margin-left: 30px;
-    margin-top: 500px;
+    margin-left: 10px;
 }
 aside{
     position: absolute;
@@ -92,12 +92,12 @@ aside{
 }
 
 .intro{
-    margin-top: 5px; 
+    margin-top: 10px; 
     margin-left: 73%;
 }
 .intro h4{
     font-family: 'Roboto Slab', serif;
-    font-size: 1.6em;
+    font-size: 1em;
     font-weight: regular; 
 }
 .intro p{
@@ -129,11 +129,17 @@ footer{
     color: white;
 }
 .content{
-    width: 70%;
+    width: 100%;
     display: flex;
     margin: auto;
-    padding: 100px 100px 50px 100px;
+    padding: 60px 100px 50px 100px;
 
+}
+.contacts .contact-title{
+    margin: auto;    
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 2em;
 }
 .contacts .vert-line{
     position: absolute;
@@ -141,7 +147,7 @@ footer{
     border-left: 3px solid whitesmoke;
 }
 .left-cont{
-    width: 80%;
+    width: 100%;
     line-height: 50px;
     text-align: center;
 }
@@ -164,9 +170,9 @@ footer{
     height: 40px;
 }
 .right-cont{
-    width: 80%;
-    margin-left: 100px;
+    width: 100%;
     text-align: center;
+
 }
 .right-cont h3{
     font-family: 'Redressed', cursive; 
@@ -209,8 +215,11 @@ footer{
 .icon-social i{
     color: black;
 }
-
-/* --- About page ---- */
+.contacts .footer{
+    margin: auto;
+    padding-bottom: 20px;
+}
+/* ------- =============== About page ============== ---- */
 .about header{
     padding: 30px 50px;
     display: flex;
@@ -235,12 +244,11 @@ footer{
 }
 .about-info{
     width: 60%;
-   
 }
-.about-info h2{
+.about-info h1, .about-info h2{
     text-align: right;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: bold;
 }
 .about-info .summary{
@@ -252,6 +260,7 @@ footer{
     font-size: 1.6em;
     font-weight:  700px;
     margin-bottom: 50px;
+    text-align: left;
 }
 .about-info .summary i{
     margin-left: 150px;
@@ -261,42 +270,70 @@ footer{
     font-size: 1.6em;
     font-weight: bold;
     color: black;
-
 }
 .about-info p{
     padding: 5px 0px;
+}
+.about-info .skills{
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40% 60%;
+    grid-template-areas: "skills-title skills-title"
+    "skills-one skills-two";
+
+}
+.about-info .skills #skills-title{
+    grid-area: skills-title;
+    justify-self: center;
+    text-decoration: underline;
+}
+.about-info .skills #skills-one{
+    grid-area: skills-one;
+    justify-self: start;
+}
+.about-info .skills #skills-two{
+    grid-area: skills-two;
+    justify-self: end;
+
 }
 
 /*--------==========***** Blog ***********===========----------*/
 .blogs{
     display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
-    grid-template-columns: 5px 10% 10% auto 10% 10% 5px;
-    grid-template-rows: 80px 70px 50px;
+    grid-template-columns: 5% 10% 10% auto 10% 10% 5%;
+    grid-template-rows: 100px 70px 50px;
     grid-template-areas: 
     ". logo . . . login ." 
     ". . bl-list-title bl-list-title bl-list-title . ."
     ". . . . . blg-side ." 
-    ". . . blg-cont-One . blg-side ." 
-    ". . . blg-cont-Two . blg-side ." 
-    ". . . blg-cont-Three . blg-side ." 
-    ". . . blg-cont-Four . blg-side .";
+    ". . blg-cont-One blg-cont-One blg-cont-One blg-side ." 
+    ". . blg-cont-Two blg-cont-Two blg-cont-Two blg-side ." 
+    ". . blg-cont-Three blg-cont-Three blg-cont-Three blg-side ." 
+    ". . blg-cont-Four blg-cont-Four blg-cont-Four blg-side .";
+}
+.bl-prt{
+    margin: 0px 3%;
 }
 .blogs .logo{
     grid-area: logo;
-    align-self: center;
-    justify-self: center;
+    align-self: flex-end;
+    justify-self: start;
 }
 .blogs .login{
     grid-area: login;
     align-self: center;
-    justify-self: center;
+    justify-self: end;
 }
 .bl-list-title{
     grid-area: bl-list-title;
     display: flex;
     justify-content: space-between;
-    align-self: center;
+}
+.bl-list-title p{
+    width: 50%;
+    text-align: right;
 }
 .blg-side{
     grid-area: blg-side;
@@ -371,7 +408,7 @@ footer{
     grid-area: blg-readM;
     align-self: end;
     border: 1px black solid;
-    padding: 3px 5px;
+    padding: 0px 10px;
     border-radius: 10px;
 }
 .blg-readM a{
@@ -390,13 +427,12 @@ footer{
     background-color: #88786B;
     display: grid;
     grid-template-columns: 5% 10% 50% auto 10% 5%;
-    grid-template-rows: 10% 10% 1fr 1fr 1fr;
+    grid-template-rows: 7% 7% auto auto 20%;
     grid-template-areas: ". logoB . . loginB ."
     ". . blgV-title blgV-title blgV-side ."
     ". . blg-article blg-view-side blgV-side ."
-    ". . blg-article blg-view-side blg-Vside ."
-    ". . blg-article . . .";
-
+    ". . blg-article blg-article-cont blg-Vside ."
+    ". . blg-comment . . .";
 }
 
 .blog-view .logo{
@@ -411,6 +447,7 @@ footer{
 .blgV-side{
     grid-area: blgV-side;
     justify-self: end;
+    align-self: center;
 }
 .blgV-side a{
     display: block;
@@ -445,8 +482,15 @@ footer{
     padding: 0px 50px;
     text-align: justify;
 }
+.blg-article-cont{
+    grid-area: blg-article-cont;
+    text-align: justify;
+}
+.blg-article-cont h4{
+    margin-bottom: 10px;
+}
 .blg-article img{
-    margin: 20px 0px 20px 15%;
+    margin: 17px 0px;
     
 }
 .blg-article strong{
@@ -456,6 +500,15 @@ footer{
 .blg-view-side{
     grid-area: blg-view-side;  
     align-self: center;
+
+}
+.blg-view-side h3{
+    font-family: 'Roboto slab', serif;
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: bolder;
+    margin: 30px 0px;
+    text-decoration: underline;
 }
 .blgVside{
     margin-bottom: 20px;
@@ -475,150 +528,171 @@ footer{
 }
 .blgVside .blgVside-cont{
     grid-area: blgVside-cont;
-
 }
 .blgVside .blgVside-arrow{
     grid-area: blgVside-arrow;
     align-self: center;
-
 }
-
-
-/* ==============-----------****** Work *******-----------======= */
-
-.work{
-    display: grid;
-    grid-template-columns: 50px 60px 100px auto 25% 30px 60px 50px;
-    grid-template-rows: 100px 150px auto auto 100px;
-    grid-template-areas: ". worLogo worLogo . . . worLogin ."
-    ". . work-title work-title . . work-side ."
-    ". . . cards-work explain-work . work-side ."
-    ". . . cards-work explain-work . work-side ."
-    ". . . . . . . .";
-}
-.work .logo{
-    grid-area: worLogo;
+.blg-comment{
+    grid-area: blg-comment;
+    padding: 20px 50px;
     align-self: center;
 }
-.work .login{
-    grid-area: worLogin;
-    align-self: center;
+.blg-comment h4{
+    margin-bottom: 10px;
 }
-.work .work-title{
-    grid-area: work-title;
-    align-self: center;
+.blg-comment form input{
+    width: 45%;
+    height: 35px;
+}
+.blg-comment form textarea{
+    height: 60px;
+}
+.blg-comment form input, form textarea{
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px black solid;
+    background-color: rgb(46, 46, 48);
+    color: antiquewhite;
+}
+.blg-comment form #long{
+    width: 91%;
+}
+.blg-comment form #sub{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.like-blog{
+    margin-top: 50px;
+    height: 50px;
+    float: right;
+}
+.like-blog i{
+    font-size: 3em;
+    cursor: pointer;
+}
+.like-blog i:hover{
+    color: red;
+    transition: 2s ease-in-out;
+}
+.like-blog p{
+    align-items: center;
+    margin-right: 10px;
+    font-size: 1em;
+    font-family: 'Courier';
+    font-weight: bolder;
+}
+/* ---------------==================************ Works **********===========-------- */
+.works{
+    background-color:#01010a ;
+    color: whitesmoke;
+}
+.works header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+.works aside .socialmedia a{
+    background-color: white;
+    font-family: 'Poppins';
+
+}
+.works aside .socialmedia i{
+    color: black;
+}
+.works aside .vert-line{
+    border-left: 3px white solid;
+}
+.works .works-title{
+    margin-left: 100px;
+    font-family: 'Redressed', curisive;
+    font-weight: bold;
     font-size: 2em;
     text-decoration: underline;
 }
-.work .work-side{
-    grid-area: work-side;
-    justify-self: center;
+.works .works-cont{
+    width: 85%;
+    margin: 50px auto 0px auto;
+    display: flex;
+    justify-content: space-between;
 }
-.work-side a{
-    display: block;
-    background-color: white;
-    width: 25px;
-    height: 25px;
-    margin: 10px;
-    text-align: center;
-    border-radius: 50%
-}
-.work-side i{
-    color: black;
-    font-size: small;
-}
-.work-side .side-line{
-    height: 170px;
-    border-right: 3px white solid;
-    margin-right: 20px;
-    margin-top: 50px;
-}
-
- .work .cards-work{
-    grid-area: cards-work;
-    display: grid; 
-    grid-template-columns: 1fr 1fr;
-}
-.cards-work .frame{
-    height: 170px;
-} 
-
-.cards-work{
-    grid-area: cards-work;
-    /* padding: 30px; */
+.works .works-cards{
+    width: 50%;
+    height: 350px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "One Two" "Three Four";
-    grid-gap: 10px;
-    
-    
+    grid-gap: 10px; 
+    margin: 30px 0px 0px 100px;
 }
-.cards-work .frame{
-    /* grid-area: One; */
+.works .works-cards .frame{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "first second" "third fourth";  
+    grid-template-areas: "first second" "third fourth"; 
 }
-.cards-work .Two{
-    /* grid-area: Two; */
-
-}
-.cards-work .Three{
-    /* grid-area: Three; */
-    
-}
-.cards-work .Four{
-    /* grid-area: Four; */
-    
-}
-.sqr-corner{
+.works-cards .sqr-corner{
     width: 20px;
-    height: 20px;
-    border: 3px rgb(64, 64, 66) solid;
-    
+    height: 15px;
+    border: 3px rgb(42, 42, 51) solid;   
 }
-.first{
+.works-cards .first{
     grid-area: first;
     border-width: 3px 0px 0px 3px;
+    border-top-color: darkblue;
+    border-left-color: darkred;
 }
-.second{
+.works-cards .second{
     grid-area: second;
-    border-width: 3px 3px 0px 0px;
-    
+    border-width: 3px 3px 0px 0px; 
 }
-.third{
+.works-cards .third{
     grid-area: third;
     border-width: 0px 0px 3px 3px;
 }
-.fourth{
+.works-cards .fourth{
     grid-area: fourth;
     border-width: 0px 3px 3px 0px;
+    border-bottom-color: darkred;
+    border-right-color: darkblue;
 }
-
-.frame img{
+.works-cards .frame{
+    width: 100%;
+    object-fit: contain;
+}
+.works-cards .frame img{
     position: absolute;
-    /* margin: auto; */
-    margin-left: 30px;
-    margin-top: 20px; 
-   }
-.frame h4{
-    margin: auto;
+    margin: 0.8%;
+    height: 20%;
+    width: 19%;
+ 
 }
-.work .explain-work{
-    grid-area: explain-work;
-    padding: 10px;
-    width: 300px;
-    height: 200px;
-    text-align: center;
-    border: 1px #88786B solid;
-    align-self: end;
-    justify-self: end;
-    font-size: smaller;
-    
+.works-cards .frame h6, a{
+    margin: auto;
+    color: white;
 }
 
+.works .expl-works{
+    width: 30%;
+    border: 1px rgb(24, 24, 32) solid;
+    height: 50%;
+    margin-top: 150px;  
+    padding: 20px; 
+    background-color: #02040a;
+}
+.works .expl-works h3{
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 3px;
+}
+.works .expl-works p{
+    text-align: justify;
+}
+.works .footer{
+    margin-left: 40px;
+    margin-top: 20px;
+}
 /* -------==============******* Dashboard *********======------*/
 .dashboard{
     background-color: #0D101B;
@@ -806,7 +880,43 @@ footer{
     border-radius: 50%;
 }
 
-@media (max-width: 900px){
+@media(max-width: 1200px){
+    /* =====================-----------Works -----------==================== */
+    .expl-works{
+        margin-top: 100px;
+    }
+    .blogs{
+        grid-template-columns: 10% 10% 10% auto 10% 10% 10%;
+        grid-template-rows: 100px 70px 50px;
+        grid-template-areas: 
+        ". logo . . . login ." 
+        ". bl-list-title bl-list-title bl-list-title bl-list-title bl-list-title ."
+        ". . . . . . blg-side" 
+        ". blg-cont-One blg-cont-One blg-cont-One blg-cont-One . blg-side" 
+        ". blg-cont-Two blg-cont-Two blg-cont-Two blg-cont-Two . blg-side" 
+        ". blg-cont-Three blg-cont-Three blg-cont-Three blg-cont-Three . blg-side" 
+        ". blg-cont-Four blg-cont-Four blg-cont-Four blg-cont-Four . blg-side";
+    }
+    .blg-cont{
+        font-size: 1.2em;
+    }
+    .blg-side{
+        justify-self: center;
+    }
+
+     /* -------------========== Blog Views ==============------------- */
+     .blog-view{
+        grid-template-columns: 3% 5% 50% auto 5% 3%;
+        grid-template-rows: 7% 7% auto auto 20%;
+        grid-template-areas: ". logoB . . loginB ."
+        ". blgV-title blgV-title blgV-title blgV-side ."
+        ". blg-article blg-article blg-view-side blgV-side ."
+        ". blg-article blg-article blg-article-cont blg-Vside ."
+        ". . blg-comment . . .";
+    }
+
+}
+@media (max-width: 800px){
     .navigator{
         margin: auto;  
         text-align: center;      
@@ -864,4 +974,300 @@ footer{
         display: none;
     }
 
+    /* ----------------============= About ============-------------- */
+    .about-info .summary #sum-sec{
+        width: 100%;
+        position: absolute;
+        left: 10px;
+        padding: 20px 90px 20px 60px;
+    }
+    .about-info .skills{
+        margin: 150px 0px 0px 0px;
+   
+     }
+     /* -----------========= Works =======---------- */
+    .works aside{
+        display: none;
+    }
+    .works .works-cont{
+        display: inline;
+    }
+    .works .works-cards{
+        width: 90%;
+        margin: 230px auto 20px auto;
+        height: 500px;
+        
+    }
+    .works-cards .frame img{
+        width: 42%;
+        height: 20%;
+        margin: 1.3%;
+        
+    }
+    .works .expl-works{
+        width: 90%;
+        margin: auto;
+        position: absolute;
+        top: 190px;
+        left: 40px;
+        height: 170px;
+        font-size: large;
+    }
+    .works .footer{
+        margin: 50px 0px 30px 290px;
+        margin-left: 290px;
+    }
+    
+    /* -------------========= Blogs ===========----------- */
+    .blogs{
+        grid-template-columns: 5% 10% 10% auto 10% 10% 5%;
+        grid-template-rows: 100px 70px 50px;
+        grid-template-areas:
+            ". logo . . . login ."
+            ". . bl-list-title bl-list-title bl-list-title . ."
+            ". . . . . blg-side ."
+            ". blg-cont-One blg-cont-One blg-cont-One blg-cont-One blg-side ."
+            ". blg-cont-Two blg-cont-Two blg-cont-Two blg-cont-Two blg-side ."
+            ". blg-cont-Three blg-cont-Three blg-cont-Three blg-cont-Three blg-side ."
+            ". blg-cont-Four blg-cont-Four blg-cont-Four blg-cont-Four blg-side .";
+    }
+    /* ---------------========= Blog View ============------------ */
+    .blog-view{
+        grid-template-columns: 3% 10% 50% auto 10% 3%;
+        grid-template-rows: 5% 5% auto auto 20%;
+        grid-template-areas: ". logoB . . loginB ."
+        ". blgV-title blgV-title blgV-title blgV-title ."
+        ". blg-article blg-article blg-view-side blg-view-side ."
+        ". blg-article blg-article blg-article-cont blg-article-cont ."
+        ". . blg-comment blg-comment . .";
+    }
+    .blgV-side{
+        display: none;
+    }
+    .logoB{
+        display: none;
+    }
+    .blg-article{
+        padding: 0px 20px 0px 0px;
+    }
+    .blg-article-cont, .blg-view-side{
+        padding-right: 20px;
+    }
+ 
+     
 }
+@media(max-width: 770px){
+    .contacts .content{
+        display: inline;
+        padding: 0;
+    }
+    .contacts .contact-title{
+        margin-top: -10px;
+    }
+    .contacts .content .left-cont{
+        position: absolute;
+        top: 600px;
+    }
+    .contacts .content .right-cont{
+        position: absolute;
+        top: 250px;
+    }
+    .contacts .vert-line{
+        display: none;
+    }
+    .contacts .footer{
+        margin-top: 700px;
+    } 
+  
+}
+@media(max-width: 700px){
+    .blogs{
+        grid-template-columns: 3% auto 10% 3%;
+        grid-template-rows: 80px 70px 50px;
+        grid-template-areas: 
+        ". logo login ." 
+        ". bl-list-title bl-list-title ."
+        ". . . ." 
+        ". blg-cont-One  blg-cont-One blg-cont-One" 
+        ". blg-cont-Two blg-cont-Two blg-cont-Two" 
+        ". blg-cont-Three blg-cont-Three blg-cont-Three" 
+        ". blg-cont-Four blg-cont-Four blg-cont-Four";
+        margin: 0px 20px;
+    }
+    .blogs .logo{
+        justify-self: start;
+    }
+    .blg-side{
+        display: none;
+    }
+    .blg-img{
+        width: 100%;
+        height: 50%;
+        margin-right: -30px;
+    }
+    .bl-prt{
+        margin: 0; 
+        padding: 0;
+        grid-template-columns: 30% auto 20%;
+        grid-template-rows: repeat(auto 3);
+        grid-template-areas: "blg-date blg-title blg-img"
+        "blg-cont blg-cont blg-img"
+        "underline underline blg-readM";
+    }
+    .blg-underline{
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+    .blg-readM{
+      justify-self: center;
+      align-self: end;
+    }
+    .blg-cont p{
+        padding: 0px;
+    }
+    .blg-date, .blg-title{
+        font-size: x-small;
+        font-weight: bold;
+    }
+
+    /* ------------============== BlogView =============-------------- */
+    .blog-view{
+        grid-template-rows: 7% 7% auto auto auto auto 20%;
+        grid-template-areas:
+        ". logoB . . loginB ."
+        ". . blgV-title blgV-title blgV-title ."
+        ". . blg-article blg-article blg-article ."
+        ". . blg-article blg-article blg-article ."
+        ". . blg-view-side blg-view-side blg-view-side ."
+        ". . blg-article-cont blg-article-cont blg-article-cont ."
+        ". . blg-comment blg-comment blg-comment .";
+    }
+    .blgV-side{
+        display: none;
+    }
+}
+@media(max-width: 600px){
+    /* ------======= About ========-------- */
+    .about .about-content{
+        display: inline;
+        padding: 0;
+    }
+    .about .about-info{
+        width: 100%;
+        text-align: center;
+        padding: 0px 50px;
+    }
+    .about-info .summary{
+        margin: auto;
+        text-align: justify;
+    }
+    .about-info h1{
+        text-align: center;
+        position: absolute;
+        top: 120px;
+    }
+    .about-info h2{
+        text-align: left;
+        font-size: 2.4em;
+        position: absolute;
+        top: 170px;
+    }
+    .about-info .summary h5{
+        font-size: 1.4em;
+        margin-bottom: 50px;
+        text-align: left;
+        position: absolute;
+        top: 230px;
+        padding-right: 20px;
+    }
+    .about-info .summary p{
+        position: absolute;
+        top: 850px;
+        padding-right: 50px;
+    }
+    .about-info .summary #sum-sec{
+        position: absolute;
+        top: 1100px;
+        padding: 0px 50px;
+    }
+   
+    .about-info .skills{
+       position: absolute;
+       top: 1240px;
+       padding: 0px 60px;
+    }
+    .about-info .skills #skills-title{
+        position: absolute;
+        top: -50px;
+    }
+    .about-info .skills #skills-two{
+        margin-left: 40px;
+    }
+    .about-profile{
+        position: absolute;
+        top: 375px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .about aside{
+        top: 200px;
+    }
+    .about aside .vert-line{
+        display: none;
+    }
+    /* ----------========= works ====----------------- */
+    .works aside{
+        display: none;
+    }   
+    .works .works-title{
+        margin-left: 20px;
+    } 
+    .works .works-cont{
+         display: inline;
+         margin: auto;
+     }
+     .works .works-cards{
+         /* margin: 30px; */
+         height: 900px;
+     }
+     .works .expl-works{
+        width: 90%;
+        margin-top: 10px;
+        height: 250px;
+        left: 20px;
+     }
+     .works .works-cards{
+         width: 90%;
+         grid-template-columns: 1fr;
+         grid-template-rows: 1fr 1fr 1fr 1fr;
+         margin-top: 320px;
+         margin-left: 20px;
+
+     }
+     .works-cards .frame img{
+        width: 86%;
+        margin: 2%;
+    }
+    .works .footer{
+        margin: 50px 50px 60px 100px;
+    }
+    /* ---------============= Blog View ==============----------- */
+    .blgV-title p{
+        text-align: right;
+        width: 150px;
+        grid-area: titleP;
+        align-self: center;
+    }
+    .blg-comment{
+        padding: 0px;
+    }
+    .blg-view-side{
+        margin-top: 150px;
+    }
+
+
+}
+
+
+
