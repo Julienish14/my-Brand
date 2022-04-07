@@ -79,11 +79,17 @@ aside{
     text-align: center;
     margin-top: 5px;
 }
+.socialmedia a:hover{
+    background-color: #d8d8f5;
+    transition: all 0.4s ease-out;
 
+}
 .socialmedia i{
     color: white;
 }
- 
+.socialmedia i:hover{
+    color: rgb(12, 45, 34);
+}
 .vert-line{
    margin-top: 35px;
    margin-left: 15px;
