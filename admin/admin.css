@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Poppins", sans-serif; */
+}
+.admin-login{
+  margin: 0;
+  padding: 0;
+  background: black; 
+  height: 100vh;
+  overflow: hidden;
+}
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+  background-color: rgb(19, 19, 22);
+
+}
+.center h3{
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+}
+.center form{
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+form .txt_field{
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+.txt_field input{
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+  color: whitesmoke;
+
+}
+.txt_field i{
+  color: rgb(187, 182, 182);
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  cursor: pointer;
+}
+.txt_field label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+.txt_field span::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #09092c;
+  transition: .5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+  top: -5px;
+  color: #2691d9;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+  width: 100%;
+}
+.pass{
+  margin: -5px 0 20px 5px;
+  color: #a6a6a6;
+  cursor: pointer;
+}
+.pass:hover{
+  text-decoration: underline;
+}
+input[type="submit"]{
+  width: 100%;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 25px;
+  font-size: 18px;
+  background: black;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 50px;
+}
+input[type="submit"]:hover{
+  border-color: #2691d9;
+  transition: .5s;
+}
+
+
+/* --------====== blogs dashboard css ======--------- */
+
+.mainbar-blog{
+    display: grid;
+    grid-template-columns: 5% auto 5%;
+    grid-template-rows: 10% 20% auto 20%;
+    grid-template-areas: "dash-head dash-head dash-head"
+    ". add-new-blog ." 
+    ". blog-part ."
+    ". . ."
+}
+.add-new-blog{
+  grid-area: add-new-blog;
+  border: 1px solid white;
+  background: black;
+  align-self: end;
+  margin-left: 50px;
+  width: 100px;
+  text-align: center;
+  padding: 5px 0px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.blog-part{
+  /* border: 1px solid red; */
+  grid-area: blog-part;
+}
+
+.blog-part .tab{
+  grid-area: tab;
+  width: 90%;
+  height: 50%;
+  border: 2px white solid;
+  border-radius: 10%;   
+  border-collapse: collapse;
+  margin: 7% 5%;
+  padding: 20px;
+  color: rgb(117, 115, 115);
+}
+.blog-part .tab th{
+  text-align: center;
+}
+.blog-part .tab td{
+  text-align: center;
+}
+
+/*-------====== New blog ======-----*/
+.partTwo{
+  display: grid;
+  grid-template-columns: 5% auto 5%;
+  grid-template-rows: 10% 20% auto 20%;
+  grid-template-areas: "dash-head dash-head dash-head"
+  ". title-head ." 
+  ". blog-part ."
+  ". . ."
+}
+.title-head{
+  grid-area: title-head;
+  justify-self: center;
+  align-self: end;
+  color: white;
+  font-size: 1.6em;
+}
+.new-blog{
+  margin: 30px 100px;
+}
+
+.new-blog form input{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  width: 100%;
+  height: 35px;
+  outline: none;
+  padding: 5px 10px;
+  font-size: 1em;
+  margin: 5px 0px;
+  border-radius: 5px;
+}
+.new-blog form textarea{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  background: white;
+  width: 100%;
+  color: black;
+  outline: none;
+  font-size: 1em;
+
+}
+.new-blog form .submit-blog{
+  width: 200px;
+}
+
+.new-blog form label{
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+}

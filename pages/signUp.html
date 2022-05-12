@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LoginToYourAccount | julienishimwe | portfolio</title>
+    <title>Sign Up | julienishimwe | portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <link rel="shortcut icon" type="image" href="../img/title-logo.jpg">
@@ -12,40 +12,20 @@
 </head>
 <body class="user-login">
     <div class="login-title">
-        <h3>Login to Your Account</h3>
+        <h3>Sign Up</h3>
     </div>
-    <div class="login-cont">
-        <div class="login-left">
-            <form action="" id="form">
-                <input type="text" id="email" class="form-control" placeholder="Email." required > <br>
+    <div class="signup-cont">
+            <form action="" id="signup">
+                <input type="text" id="fullname" class="form-control" placeholder="Full name." required> <br>
+                <input type="text" id="email" class="form-control" placeholder="Your Email." required> <br>
                 <input type="password" id="pwd" class="form-control" placeholder="Password." required>
                 <i class="fa fa-eye" id="eye"></i><br>
-                <input type="submit" class="submit" value="Login">
+                <input type="submit" class="submit" value="submit">
             </form>
-        </div>
-        <!-- <p>/</p> -->
-        <div class="login-right">
-            <div class="to-acc">
-                <i class="fa-brands fa-google"></i>
-                Login With Your Google
-            </div>
-            <div class="to-acc">
-                <i class="fa-brands fa-yahoo"></i>
-                Login With Your Yohoo!
-            </div>
-            <div class="to-acc">
-                <i class="fa-brands fa-facebook"></i>
-                Login With Your Facebook
-            </div>
-    
-        </div>
     </div>
     <div class="user-login-footer">
         <div class="orgi-footer">
             <p>julish &copy copyright 2022</p>
-        </div>
-        <div class="user-signUP">
-            <p>If You don't have an account Please <strong><a href="../pages/signUp.html">Sign Up </a> </strong></p>
         </div>
     </div>
     <script>
@@ -60,27 +40,44 @@
             (pwd.type == 'password') ? pwd.type = 'text' :
             pwd.type = 'password';
         }
-    </script>	
-    <!--
+
+        /*
+        const url = "https://my-brand-project.herokuapp.com";
+        const formEl = document.querySelector('form');
+        formEl.addEventListener('submit', async (e) => {
+           e.preventDefault();
+           const formData = new FormData(formEl); 
+         
+           try{
+               const response = await fetch(`${url}/api/v1/users/signUp`, {
+                   method: 'post',
+                   body: formData,
+                   headers: {
+                       'Content-Type': 'application/json'
+                   }
+               });
+
+               const json = await response.json();
+               console.log(json);
+           }catch(e){
+                console.error(e);
+                alert('there\'s an error');
+           }
+        });
+        */
+    </script>
     <script>
-         function userInfo()
-        {
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('pwd').value;
-        localStorage.setItem('email' ,email)
-        localStorage.setItem('password' , password)
-        }
-      
-         document.getElementById('login').addEventListener("submit", (e) => {
+        document.getElementById('signup').addEventListener("submit", (e) => {
             e.preventDefault();
+                const fullname = document.getElementById('fullname').value;
                 const email = document.getElementById('email').value;
                 const password = document.getElementById('pwd').value;
 
                 var myHeaders = new Headers();
                 myHeaders.append("Content-Type", "application/json");
-                myHeaders.append("Cookie", "jwt");
 
                 var raw = JSON.stringify({
+                "full_name": fullname,
                 "email": email,
                 "password": password
                 });
@@ -92,17 +89,17 @@
                 redirect: 'follow'
                 };
 
-                fetch("https://my-brand-project.herokuapp.com/api/v1/users/login", requestOptions)
+                fetch("https://my-brand-project.herokuapp.com/api/v1/users/signUp", requestOptions)
                 .then(response => response.text())
-                .then(result => console.log(result))
+                .then(result => {console.log(result)
+                alert( 'signup successfully');}
+                )
+                
+                location.assign('../pages/user-login.html')
+
                 .catch(error => console.log('error', error));
 
         });
-    </script>
-    -->
-    <script src="../js/globalVariable.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="../js/login.js"></script>
-    
+    </script>	
 </body>
 </html>
